@@ -67,6 +67,8 @@ const getVentas = async () => {
 };
 ```
 
+---
+
 ##📂 Estructura del Proyecto
 
 ```text
@@ -86,6 +88,8 @@ APIFRANK/
 └── README.md # Documentación
 ```
 
+---
+
 ##🧠 Buenas Prácticas Aplicadas
 Modularización: Cada entidad (clientes, ventas, etc.) tiene su propia lógica de JavaScript para facilitar el mantenimiento.
 
@@ -94,6 +98,8 @@ Asincronía Pura: Uso extensivo de async/await para evitar el bloqueo del hilo p
 Validación Previa: Todos los flujos fueron testeados en Postman antes de la implementación en código para asegurar respuestas 200 OK y 201 Created.
 
 UI/UX: Diseño pensado en la movilidad del usuario gracias al sistema de rejilla de Bootstrap.
+
+---
 
 ##🧪 Próximas Mejoras
 [ ] Implementación de Autenticación JWT para mayor seguridad.
@@ -104,9 +110,7 @@ UI/UX: Diseño pensado en la movilidad del usuario gracias al sistema de rejilla
 
 [ ] Generación de reportes en PDF de las ventas realizadas.
 
+---
+
 ##👤 Autor
 Cesar Rodas Desarrollador apasionado por el ecosistema Web y la integración de APIs.
-
-```
-
-```
