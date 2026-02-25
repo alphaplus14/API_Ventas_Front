@@ -94,27 +94,28 @@ APIFRANK/
 
 ## 🧠 Buenas Prácticas Aplicadas
 
--Modularización:\*\* Cada entidad (clientes, ventas, etc.) tiene su propia lógica de JavaScript para facilitar el mantenimiento.
+- Modularización: Cada entidad (clientes, ventas, etc.) tiene su propia lógica de JavaScript para facilitar el mantenimiento.
 
--Asincronía Pura:\*\* Uso extensivo de async/await para evitar el bloqueo del hilo principal durante las peticiones.
+- Asincronía Pura: Uso extensivo de async/await para evitar el bloqueo del hilo principal durante las peticiones.
 
--Validación Previa:\*\* Todos los flujos fueron testeados en Postman antes de la implementación en código para asegurar respuestas 200 OK y 201 Created.
+- Validación Previa: Todos los flujos fueron testeados en Postman antes de la implementación en código para asegurar respuestas 200 OK y 201 Created.
 
--UI/UX:\*\* Diseño pensado en la movilidad del usuario gracias al sistema de rejilla de Bootstrap.
+- UI/UX: Diseño pensado en la movilidad del usuario gracias al sistema de rejilla de Bootstrap.
 
 ---
 
 ## 🧪 Próximas Mejoras
 
-- \*\*[ ] Implementación de Autenticación JWT para mayor seguridad.\*\*
+- [ ] Implementación de Autenticación JWT para mayor seguridad.
 
-- \*\*[ ] Paginación en el lado del servidor para grandes volúmenes de datos.\*\*
+- [ ] Paginación en el lado del servidor para grandes volúmenes de datos.
 
-- \*\*[ ] Filtros avanzados de búsqueda por fecha y cliente.\*\*
+- [ ] Filtros avanzados de búsqueda por fecha y cliente.
 
-- \*\*[ ] Generación de reportes en PDF de las ventas realizadas.\*\*
+- [ ] Generación de reportes en PDF de las ventas realizadas.
 
 ---
 
-##👤 Autor
+## 👤 Autor
+
 Cesar Rodas Desarrollador apasionado por el ecosistema Web y la integración de APIs.
