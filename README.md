@@ -55,32 +55,36 @@ Gracias a la integración con Swagger, el proyecto consume los siguientes recurs
 // Ejemplo: Obtener todas las ventas
 const getVentas = async () => {
   try {
-    const response = await fetch('[https://apifrank.proyectosadso.com/ventas](https://apifrank.proyectosadso.com/ventas)');
-    if (!response.ok) throw new Error('Error en la petición');
+    const response = await fetch(
+      "[https://apifrank.proyectosadso.com/ventas](https://apifrank.proyectosadso.com/ventas)",
+    );
+    if (!response.ok) throw new Error("Error en la petición");
     const ventas = await response.json();
     console.log(ventas);
   } catch (error) {
     console.error("Hubo un problema:", error);
   }
 };
-
+```
 
 ##📂 Estructura del Proyecto
 
+```text
 APIFRANK/
-├── dist/                # Recursos compilados y estilos
-│   └── css/             # Archivos CSS (Bootstrap, Custom)
-├── js/                  # Lógica de la aplicación
-│   ├── datatables/      # Plugins de tablas
-│   ├── ventas.js        # Módulo de gestión de ventas
-│   ├── productos.js     # Módulo de gestión de productos
-│   └── ...              # Archivos CRUD por entidad
-├── views/               # Vistas modulares en PHP
-│   ├── productos.php
-│   ├── clientes.php
-│   └── empleados.php
-├── index.html           # Punto de entrada principal
-└── README.md            # Documentación
+├── dist/ # Recursos compilados y estilos
+│ └── css/ # Archivos CSS (Bootstrap, Custom)
+├── js/ # Lógica de la aplicación
+│ ├── datatables/ # Plugins de tablas
+│ ├── ventas.js # Módulo de gestión de ventas
+│ ├── productos.js # Módulo de gestión de productos
+│ └── ... # Archivos CRUD por entidad
+├── views/ # Vistas modulares en PHP
+│ ├── productos.php
+│ ├── clientes.php
+│ └── empleados.php
+├── index.html # Punto de entrada principal
+└── README.md # Documentación
+```
 
 ##🧠 Buenas Prácticas Aplicadas
 Modularización: Cada entidad (clientes, ventas, etc.) tiene su propia lógica de JavaScript para facilitar el mantenimiento.
@@ -102,4 +106,7 @@ UI/UX: Diseño pensado en la movilidad del usuario gracias al sistema de rejilla
 
 ##👤 Autor
 Cesar Rodas Desarrollador apasionado por el ecosistema Web y la integración de APIs.
+
+```
+
 ```
