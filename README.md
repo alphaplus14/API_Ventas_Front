@@ -1,4 +1,4 @@
-# 🛒 APIFRANK - Sistema de Gestión de Ventas
+# 🛒 API - Sistema de Gestión de Ventas
 
 ![Estado del Proyecto](https://img.shields.io/badge/Estado-En%20Desarrollo-green)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)
