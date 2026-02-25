@@ -1,158 +1,104 @@
-📌 Proyecto – Consumo de API REST con JavaScript y PHP
+# 🛒 APIFRANK - Sistema de Gestión de Ventas
 
-Este proyecto implementa una aplicación web que consume una API REST documentada con Swagger (OpenAPI).
-Permite realizar operaciones de listar, crear, editar, actualizar y eliminar ventas, así como consumir datos relacionados como productos, clientes y empleados.
+![Estado del Proyecto](https://img.shields.io/badge/Estado-En%20Desarrollo-green)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)
+![PHP](https://img.shields.io/badge/Backend-PHP-blue)
+![Bootstrap](https://img.shields.io/badge/UI-Bootstrap%205-purple)
 
-La API se puede explorar con documentación interactiva disponible en Swagger UI.
+Esta aplicación web permite la gestión integral de un ciclo de ventas (Listar, Crear, Editar y Eliminar), consumiendo una **API REST** robusta. El proyecto integra una interfaz dinámica con JavaScript y un soporte en el backend con PHP, asegurando una experiencia de usuario fluida y responsiva.
 
-🛠 Tecnologías utilizadas
+---
 
-🟨 JavaScript (ES6) – Fetch API, async/await
+## 🚀 Vista Previa e Interacción
 
-🐘 PHP – Integración backend
+La aplicación consume datos en tiempo real de una API documentada bajo el estándar **OpenAPI (Swagger)**.
 
-🎨 HTML5 & CSS3 – Interfaz de usuario
+- **Documentación Interactiva:** [Explorar Swagger UI](https://apifrank.proyectosadso.com/public/swagger/index.html#/)
+- **Capacidades:** Gestión de ventas, productos, clientes y empleados.
 
-🅱 Bootstrap 5 – Componentes UI
+---
 
-🧪 Postman – Pruebas de endpoints
+## 🛠️ Tecnologías Utilizadas
 
-📄 Swagger (OpenAPI) – Documentación oficial de la API
+| Tecnología           | Uso Principal                                                       |
+| :------------------- | :------------------------------------------------------------------ |
+| **JavaScript (ES6)** | Lógica de negocio, Fetch API y manipulación del DOM.                |
+| **PHP**              | Integración y soporte de procesos en el servidor.                   |
+| **Bootstrap 5**      | Diseño responsivo y componentes de interfaz listos para producción. |
+| **HTML5 & CSS3**     | Estructura semántica y estilos personalizados.                      |
+| **Postman**          | Pruebas de carga, validación de endpoints y testing de JSON.        |
+| **Swagger**          | Documentación técnica y pruebas interactivas de la API.             |
 
-📄 Documentación oficial de la API
+---
 
-La API consumida en este proyecto está documentada con Swagger UI, lo que permite:
+## 🔗 Endpoints Principales Consumidos
 
-Explorar todos los endpoints disponibles
+Gracias a la integración con Swagger, el proyecto consume los siguientes recursos de forma eficiente:
 
-Ver parámetros de entrada y salida
+### Ventas (`/ventas`)
 
-Probar solicitudes directamente desde el navegador
+- `GET /ventas` - Obtiene el listado completo de transacciones.
+- `POST /ventas` - Registra una nueva venta en el sistema.
+- `PUT /ventas/{id}` - Actualiza la información de una venta existente.
+- `DELETE /ventas/{id}` - Elimina un registro de la base de datos.
 
-Generar ejemplos de request/response
+> [!TIP]
+> También se integran módulos de **Productos**, **Clientes** y **Empleados** para garantizar la integridad referencial de cada venta.
 
-Puedes acceder a la documentación aquí:
+---
 
-➡️ https://apifrank.proyectosadso.com/public/swagger/index.html#/
+## 💻 Ejemplos de Implementación
 
-🚀 Endpoints principales consumidos
+### Consumo de API con Fetch (Async/Await)
 
-La documentación Swagger describe rutas disponibles como:
+```javascript
+// Ejemplo: Obtener todas las ventas
+const getVentas = async () => {
+  try {
+    const response = await fetch('[https://apifrank.proyectosadso.com/ventas](https://apifrank.proyectosadso.com/ventas)');
+    if (!response.ok) throw new Error('Error en la petición');
+    const ventas = await response.json();
+    console.log(ventas);
+  } catch (error) {
+    console.error("Hubo un problema:", error);
+  }
+};
 
-⚡ Ejemplos de endpoints que se consumen en este proyecto:
+#📂 Estructura del Proyecto
 
-GET    /ventas
-GET    /ventas/{id}
-POST   /ventas
-PUT    /ventas/{id}
-DELETE /ventas/{id}
-
-Además, según Swagger UI hay otros módulos relacionados con:
-
-Productos
-
-Clientes
-
-Empleados
-
-Detalles de ventas
-
-Los endpoints y sus parámetros están disponibles y probados desde la documentación swagger y desde Postman para validar su correcto funcionamiento
-
-📌 Consumo de API (ejemplo con Fetch)
-
-Ejemplo de petición GET a la API:
-
-const response = await fetch('https://apifrank.proyectosadso.com/ventas');
-const ventas = await response.json();
-
-Ejemplo de petición PUT:
-
-await fetch(`https://apifrank.proyectosadso.com/ventas/${id}`, {
-  method: 'PUT',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify(data),
-});
-📌 Pruebas con Postman
-
-Antes de integrar el frontend y backend, se realizaron pruebas de todos los métodos principales en Postman:
-
-✔ Verificación de respuestas 200, 201, 400, 404
-✔ Validación de campos requeridos
-✔ Revisión de datos JSON devueltos
-✔ Confirmación de parámetros aceptados
-
-Esto asegura que el consumo de la API es correcto y coincide con la documentación generada por Swagger.
-
-🧩 Estructura del proyecto
-/
 APIFRANK/
-│
-├── dist/
-│   └── css/
-│       ├── bootstrap/
-│       ├── juego.css
-│       ├── lobby.css
-│       ├── login.css
-│       ├── pin.css
-│       └── styles.css
-│
-├── js/
-│   ├── datatables/
-│   ├── cargareselect.js
-│   ├── clientes.js
-│   ├── crearcliente.js
-│   ├── crearempelado.js
-│   ├── crearproducto.js
-│   ├── crearventa.js
-│   ├── editarcliente.js
-│   ├── editarempleado.js
-│   ├── editarproducto.js
-│   ├── editarventa.js
-│   ├── eliminarcliente.js
-│   ├── eliminarempleados.js
-│   ├── eliminarproducto.js
-│   ├── eliminarventa.js
-│   ├── empleados.js
-│   ├── productos.js
-│   ├── scripts.js
-│   ├── ventas.js
-│   ├── vercliente.js
-│   ├── verempleado.js
-│   ├── verproducto.js
-│   └── verventa.js
-│
-├── views/
+├── dist/                # Recursos compilados y estilos
+│   └── css/             # Archivos CSS (Bootstrap, Custom)
+├── js/                  # Lógica de la aplicación
+│   ├── datatables/      # Plugins de tablas
+│   ├── ventas.js        # Módulo de gestión de ventas
+│   ├── productos.js     # Módulo de gestión de productos
+│   └── ...              # Archivos CRUD por entidad
+├── views/               # Vistas modulares en PHP
 │   ├── productos.php
 │   ├── clientes.php
 │   └── empleados.php
-│
-├── index.html
-├── README.md
+├── index.html           # Punto de entrada principal
+└── README.md            # Documentación
 
-🧠 Buenas prácticas aplicadas
+#🧠 Buenas Prácticas Aplicadas
+Modularización: Cada entidad (clientes, ventas, etc.) tiene su propia lógica de JavaScript para facilitar el mantenimiento.
 
-✔ Manejo de async/await para llamadas asíncronas
-✔ Validación de respuestas HTTP
-✔ Renderización dinámica de datos con JavaScript
-✔ Separación de lógica por módulos
-✔ Pruebas desde Swagger y Postman antes de integración
-✔ UI responsiva con Bootstrap
+Asincronía Pura: Uso extensivo de async/await para evitar el bloqueo del hilo principal durante las peticiones.
 
-🧪 Mejoras futuras
+Validación Previa: Todos los flujos fueron testeados en Postman antes de la implementación en código para asegurar respuestas 200 OK y 201 Created.
 
-Puedes aplicar mejoras como:
+UI/UX: Diseño pensado en la movilidad del usuario gracias al sistema de rejilla de Bootstrap.
 
-Autenticación con JWT
+#🧪 Próximas Mejoras
+[ ] Implementación de Autenticación JWT para mayor seguridad.
 
-Paginación en listados
+[ ] Paginación en el lado del servidor para grandes volúmenes de datos.
 
-Filtros de búsqueda en frontend
+[ ] Filtros avanzados de búsqueda por fecha y cliente.
 
-Validaciones avanzadas en formularios
+[ ] Generación de reportes en PDF de las ventas realizadas.
 
-📌 Autor
-
-Proyecto desarrollado por Cesar Rodas
-
-Consumo de API REST documentada con Swagger, integrada en frontend con JavaScript y backend con PHP.
+#👤 Autor
+Cesar Rodas Desarrollador apasionado por el ecosistema Web y la integración de APIs.
+```
